@@ -643,4 +643,11 @@ class Spotify
 
         return new PendingRequest($endpoint, $acceptedParams);
     }
+
+    public function me(): PendingRequest
+    {
+        $endpoint = '/me/';
+
+        return new PendingRequest($endpoint);
+    }
 }
