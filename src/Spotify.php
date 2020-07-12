@@ -644,9 +644,15 @@ class Spotify
         return new PendingRequest($endpoint, $acceptedParams);
     }
 
-    public function me(): PendingRequest
+    /**
+     * Get Spotify catalog information for a single track identified by its unique Spotify ID.
+     *
+     * @param string $id
+     * @return PendingRequest
+     */
+    public function liked(): PendingRequest
     {
-        $endpoint = '/me/';
+        $endpoint = '/me/tracks';
 
         return new PendingRequest($endpoint);
     }
